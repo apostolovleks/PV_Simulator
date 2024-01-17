@@ -1,0 +1,5 @@
+pika==1.3.2
+pvlib==0.10.3
+PyQt5==5.15.10
+pytest==7.4.4
+python-dotenv==1.0.0

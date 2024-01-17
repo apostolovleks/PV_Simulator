@@ -1,0 +1,30 @@
+version: '3'
+services:
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    healthcheck:
+      test: rabbitmq-diagnostics -q ping
+      interval: 10s
+      timeout: 3s
+      retries: 3
+
+  receiver:
+    build:
+      context: .
+      dockerfile: receiver.Dockerfile
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    volumes:
+      - ./results:/app/results
+
+  producer:
+    build:
+      context: .
+      dockerfile: producer.Dockerfile
+    depends_on:
+      - receiver
+
