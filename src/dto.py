@@ -12,7 +12,7 @@ class Location:
 @dataclass
 class Power:
     power_value: float
-    dt: str = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    dt: str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     def to_json(self):
         return json.dumps(self.__dict__)
@@ -29,5 +29,5 @@ class ResultData:
     def __post_init__(self):
         self.dt_str = str(self.dt_str)
         self.household_consumption = str(self.household_consumption)
-        self.pv_power = f'{self.pv_power:.5f}'
-        self.result_consumption = str(self.result_consumption)
+        self.pv_power = f"{self.pv_power:.5f}"
+        self.result_consumption = f"{self.result_consumption:.2f}"

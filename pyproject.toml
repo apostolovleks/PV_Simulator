@@ -1,0 +1,9 @@
+[tool.black]
+line-length = 79
+exclude = 'requirements*.txt'
+
+
+[tool.pytest.ini_options]
+python_files = ["test_*.py", "*_test.py"]
+pythonpath = ["src"]
+testpaths = ["tests"]
