@@ -1,7 +1,7 @@
 # PV Simulator Challenge
 
 This application models household consumption and electricity generation from solar panels.
-The calculation difference between consumed and produced energy is recorded over time in a csv file, which is located in the results folder.
+The calculation difference between consumed and produced energy is recorded over time in a csv file, which is located in the **results folder**.
 
 ### When performing this task the following technologies were used:
 * Python 3.10:
@@ -53,6 +53,7 @@ Starting the RabbitMQ server if it is not running:
 ```
 sudo docker compose up -d rabbitmq
 ```
+You may need to wait a couple of seconds until the server becomes available.
 Of course, in future tests, it will be necessary to replace the real server with a mock-server.
 
 And then:
