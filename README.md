@@ -31,7 +31,7 @@ python -m venv venv
 
 . venv/bin/activate
 ```
-run docker compose 
+run docker compose:
 
 ```
 sudo docker compose up
@@ -55,7 +55,7 @@ sudo docker compose up -d rabbitmq
 ```
 Of course, in future tests, it will be necessary to replace the real server with a mock-server.
 
-and then:
+And then:
 ```
 pytest
 ```
